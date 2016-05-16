@@ -3,4 +3,43 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_700">#388E3C</color>
+
+    <color name="material_yellow_a200">#FFFF00</color>
+    <color name="material_yellow_a400">#FFEA00</color>
+
+    <color name="material_teal_500">#009688</color>
+    <color name="material_teal_600">#00897B</color>
+
+    <color name="material_red_500">#F44336</color>
+    <color name="material_red_600">#E53935</color>
+
+    <color name="material_blue_500">#2196F3</color>
+    <color name="material_blue_600">#1E88E5</color>
+
+    <color name="material_deep_orange_500">#FF5722</color>
+    <color name="material_deep_orange_600">#F4511E</color>
+
+    <color name="material_amber_500">#FFC107</color>
+    <color name="material_amber_600">#FFB300</color>
+
+    <color name="material_brown_500">#795548</color>
+    <color name="material_brown_600">#6D4C41</color>
+
+    <color name="black_primary_text">#BF000000</color>
+    <color name="black_secondary_text">#80000000</color>
+    <color name="black_disabled_hint_text">#4D000000</color>
+    <color name="black_divider">#4D000000</color>
+
+    <color name="white_primary_text">#FFFFFF</color>
+    <color name="white_secondary_text">#B3FFFFFF</color>
+    <color name="white_disabled_hint_text">#80FFFFFF</color>
+    <color name="white_divider">#26FFFFFF</color>
+
+    <color name="background">#E5E5E5</color>
+
+    <color name="white_transparent">#8FFF</color>
+    <color name="black_transparent">#33212121</color>
 </resources>
