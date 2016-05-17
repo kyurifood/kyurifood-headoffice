@@ -1,102 +1,128 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/DefaultLayout"
-    android:gravity="center"
+    style="@style/LayoutMatchParent"
+    android:background="@drawable/layout_bg"
     tools:context="com.artivisi.android.kyurifood.headoffice.fragments.DashboardFragment">
 
     <LinearLayout style="@style/ComponentLayout"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:padding="@dimen/layout_padding"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <LinearLayout style="@style/ComponentLayout"
-            android:background="@color/material_blue_600"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                style="@style/LayoutMatchParent"
-                android:padding="@dimen/layout_padding"
-                android:src="@drawable/mn_product"/>
-            <TextView style="@style/Text.Title.White"
-                android:gravity="center"
-                android:background="@color/black_transparent"
-                android:text="Produk"/>
+            android:orientation="horizontal">
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_blue_bg"
+                android:id="@+id/btn_menu_produk">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_product"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Produk"/>
+            </LinearLayout>
+            <View style="@style/WhiteSpaceHorizontal" />
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_deep_orange_bg"
+                android:id="@+id/btn_menu_regional">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_regional"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Regional"/>
+            </LinearLayout>
         </LinearLayout>
-        <View style="@style/WhiteSpaceHorizontal" />
+        <View style="@style/WhiteSpaceVertical" />
         <LinearLayout style="@style/ComponentLayout"
-            android:background="@color/material_deep_orange_600"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                style="@style/LayoutMatchParent"
-                android:padding="@dimen/layout_padding"
-                android:src="@drawable/mn_regional"/>
-            <TextView style="@style/Text.Title.White"
-                android:gravity="center"
-                android:background="@color/black_transparent"
-                android:text="Regional"/>
+            android:orientation="horizontal">
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_amber_bg"
+                android:id="@+id/btn_menu_distributor">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_distributor"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Distributor"/>
+            </LinearLayout>
+            <View style="@style/WhiteSpaceHorizontal" />
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_teal_bg"
+                android:id="@+id/btn_menu_marketer">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_marketer"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Marketer"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/WhiteSpaceVertical" />
+        <LinearLayout style="@style/ComponentLayout"
+            android:orientation="horizontal">
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_red_bg"
+                android:id="@+id/btn_menu_pesanan">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_order"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Pesanan"/>
+            </LinearLayout>
+            <View style="@style/WhiteSpaceHorizontal" />
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_brown_bg"
+                android:id="@+id/btn_menu_laporan">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_report"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Laporan"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/WhiteSpaceVertical" />
+        <LinearLayout style="@style/ComponentLayout"
+            android:orientation="horizontal">
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_lime_bg"
+                android:id="@+id/btn_menu_approval">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_approval"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Approval"/>
+            </LinearLayout>
+            <View style="@style/WhiteSpaceHorizontal" />
+            <LinearLayout style="@style/MenuButton"
+                android:background="@drawable/btn_purple_bg"
+                android:id="@+id/btn_menu_pengaturan">
+                <ImageView
+                    style="@style/LayoutMatchParent"
+                    android:padding="@dimen/layout_padding"
+                    android:src="@drawable/mn_pengaturan"/>
+                <TextView style="@style/Text.Title.White"
+                    android:gravity="center"
+                    android:background="@color/black_transparent"
+                    android:text="Pengaturan"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    <View style="@style/WhiteSpaceVertical" />
-    <LinearLayout style="@style/ComponentLayout"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-        <LinearLayout style="@style/ComponentLayout"
-            android:background="@color/material_amber_600"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                style="@style/LayoutMatchParent"
-                android:padding="@dimen/layout_padding"
-                android:src="@drawable/mn_distributor"/>
-            <TextView style="@style/Text.Title.White"
-                android:gravity="center"
-                android:background="@color/black_transparent"
-                android:text="Distributor"/>
-        </LinearLayout>
-        <View style="@style/WhiteSpaceHorizontal" />
-        <LinearLayout style="@style/ComponentLayout"
-            android:background="@color/material_teal_600"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                style="@style/LayoutMatchParent"
-                android:padding="@dimen/layout_padding"
-                android:src="@drawable/mn_marketer"/>
-            <TextView style="@style/Text.Title.White"
-                android:gravity="center"
-                android:background="@color/black_transparent"
-                android:text="Marketer"/>
-        </LinearLayout>
-    </LinearLayout>
-    <View style="@style/WhiteSpaceVertical" />
-    <LinearLayout style="@style/ComponentLayout"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-        <LinearLayout style="@style/ComponentLayout"
-            android:background="@color/material_red_600"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                style="@style/LayoutMatchParent"
-                android:padding="@dimen/layout_padding"
-                android:src="@drawable/mn_order"/>
-            <TextView style="@style/Text.Title.White"
-                android:gravity="center"
-                android:background="@color/black_transparent"
-                android:text="Pesanan"/>
-        </LinearLayout>
-        <View style="@style/WhiteSpaceHorizontal" />
-        <LinearLayout style="@style/ComponentLayout"
-            android:background="@color/material_brown_600"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                style="@style/LayoutMatchParent"
-                android:padding="@dimen/layout_padding"
-                android:src="@drawable/mn_report"/>
-            <TextView style="@style/Text.Title.White"
-                android:gravity="center"
-                android:background="@color/black_transparent"
-                android:text="Laporan"/>
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+</ScrollView>

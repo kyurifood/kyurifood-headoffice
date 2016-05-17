@@ -4,9 +4,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.artivisi.android.kyurifood.headoffice.R;
 
@@ -27,6 +30,19 @@ public class DashboardFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    // Component Variable
+    private View rootView;
+
+
+    ProdukFragment produkFragment = new ProdukFragment();
+    RegionalFragment regionalFragment = new RegionalFragment();
+    DistributorFragment distributorFragment = new DistributorFragment();
+    MarketerFragment marketerFragment = new MarketerFragment();
+    PesananFragment pesananFragment = new PesananFragment();
+    LaporanFragment laporanFragment = new LaporanFragment();
+    ApprovalFragment approvalFragment = new ApprovalFragment();
+    PengaturanFragment pengaturanFragment = new PengaturanFragment();
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,7 +81,92 @@ public class DashboardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        rootView = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        LinearLayout btnMenuProduk = (LinearLayout) rootView.findViewById(R.id.btn_menu_produk);
+        LinearLayout btnMenuRegional = (LinearLayout) rootView.findViewById(R.id.btn_menu_regional);
+        LinearLayout btnMenuDistributor = (LinearLayout) rootView.findViewById(R.id.btn_menu_distributor);
+        LinearLayout btnMenuMarketer = (LinearLayout) rootView.findViewById(R.id.btn_menu_marketer);
+        LinearLayout btnMenuPesanan = (LinearLayout) rootView.findViewById(R.id.btn_menu_pesanan);
+        LinearLayout btnMenuLaporan = (LinearLayout) rootView.findViewById(R.id.btn_menu_laporan);
+        LinearLayout btnMenuApproval = (LinearLayout) rootView.findViewById(R.id.btn_menu_approval);
+        LinearLayout btnMenuPengaturan = (LinearLayout) rootView.findViewById(R.id.btn_menu_pengaturan);
+
+        final FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+        btnMenuProduk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter,produkFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        btnMenuRegional.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter, regionalFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        btnMenuDistributor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter, distributorFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        btnMenuMarketer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter, marketerFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        btnMenuPesanan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter, pesananFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        btnMenuLaporan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter, laporanFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        btnMenuApproval.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter, approvalFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        btnMenuPengaturan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transaction.replace(R.id.containter, pengaturanFragment);
+                transaction.addToBackStack("dashboard");
+                transaction.commit();
+            }
+        });
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -119,6 +119,63 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="AmberButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/material_amber_600</item>
+        <item name="colorButtonNormal">@color/material_amber_500</item>
+        <item name="android:textColorPrimary">@color/white_primary_text</item>
+    </style>
+
+    <style name="AmberButton">
+        <item name="android:theme">@style/AmberButtonTheme</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BrownButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/material_brown_600</item>
+        <item name="colorButtonNormal">@color/material_brown_500</item>
+        <item name="android:textColorPrimary">@color/white_primary_text</item>
+    </style>
+
+    <style name="BrownButton">
+        <item name="android:theme">@style/BrownButtonTheme</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LimeButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/material_lime_600</item>
+        <item name="colorButtonNormal">@color/material_lime_500</item>
+        <item name="android:textColorPrimary">@color/white_primary_text</item>
+    </style>
+
+    <style name="LimeButton">
+        <item name="android:theme">@style/LimeButton</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="PurpleButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/material_purple_600</item>
+        <item name="colorButtonNormal">@color/material_purple_500</item>
+        <item name="android:textColorPrimary">@color/white_primary_text</item>
+    </style>
+
+    <style name="PurpleButton">
+        <item name="android:theme">@style/PurpleButtonTheme</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MenuButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
     <style name="Text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

@@ -28,6 +28,12 @@
     <color name="material_brown_500">#795548</color>
     <color name="material_brown_600">#6D4C41</color>
 
+    <color name="material_lime_500">#CDDC39</color>
+    <color name="material_lime_600">#C0CA33</color>
+
+    <color name="material_purple_500">#9C27B0</color>
+    <color name="material_purple_600">#8E24AA</color>
+
     <color name="black_primary_text">#BF000000</color>
     <color name="black_secondary_text">#80000000</color>
     <color name="black_disabled_hint_text">#4D000000</color>
