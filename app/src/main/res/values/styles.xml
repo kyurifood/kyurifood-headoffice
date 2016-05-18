@@ -13,12 +13,7 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
-    <style name="spinnerDropDownItemStyle">
-        <item name="android:padding">20dp</item>
-        <item name="android:textSize">30sp</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+
 
     <style name="GreenButtonTheme" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorAccentDark</item>
