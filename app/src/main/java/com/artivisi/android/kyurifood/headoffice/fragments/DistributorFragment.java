@@ -89,8 +89,30 @@ public class DistributorFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view =  inflater.inflate(R.layout.fragment_distributor, container, false);
         txtkode = (EditText)view.findViewById(R.id.editkode);
-        if (txtkode.getText().toString().length() == 0){
-            txtkode.setError("anjrit");
+        txtnama = (EditText)view.findViewById(R.id.editnama);
+        txthp = (EditText)view.findViewById(R.id.edithp);
+        txtalamat = (EditText)view.findViewById(R.id.editalamat);
+        txtkodepos = (EditText)view.findViewById(R.id.editkodepos);
+        txtemail = (EditText)view.findViewById(R.id.editemail);
+        String txtk =  txtkode.getText().toString();
+
+        if (txtk.matches("")){
+            txtkode.setError("Tidak boleh kosong!");
+        }
+        if (txtnama.getText().toString().length() == 0){
+            txtnama.setError("Tidak boleh kosong!");
+        }
+        if (txthp.getText().toString().length() == 0){
+            txthp.setError("Tidak boleh kosong!");
+        }
+        if (txtalamat.getText().toString().length() == 0){
+            txtalamat.setError("Tidak boleh kosong!");
+        }
+        if (txtkodepos.getText().toString().length() == 0){
+            txtkodepos.setError("Tidak boleh kosong!");
+        }
+        if (txtemail.getText().toString().length() == 0){
+            txtemail.setError("Tidak boleh kosong!");
         }
 
 

@@ -72,7 +72,6 @@
             <Button style="@style/GreenButton"
                 android:text="ok"
                 android:id="@+id/ok"/>
-
             <Button style="@style/RedButton"
                 android:text="cancel"
                 android:id="@+id/cancel"/>
