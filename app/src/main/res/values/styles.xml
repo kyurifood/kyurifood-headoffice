@@ -32,6 +32,7 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+
     <style name="LayoutMatchParent">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -117,6 +118,25 @@
         <item name="android:theme">@style/RedButtonTheme</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="HijauKyurifood" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/material_green_700</item>
+        <item name="colorButtonNormal">@color/material_green_500</item>
+        <item name="android:textColorPrimary">@color/white_primary_text</item>
+    </style>
+
+    <style name="Hijau">
+        <item name="android:theme">@style/HijauKyurifood</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="BlueButtonTheme" parent="Theme.AppCompat.Light">
