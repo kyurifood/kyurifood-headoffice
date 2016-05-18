@@ -12,6 +12,8 @@
 
     <dimen name="toast_layout_padding">10dp</dimen>
 
+    <dimen name="layout_padding_margin">13dp</dimen>
+
     <dimen name="component_padding">8dp</dimen>
 
     <dimen name="spinner_padding">10dp</dimen>
