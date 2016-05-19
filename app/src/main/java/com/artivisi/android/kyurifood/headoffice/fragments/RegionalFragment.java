@@ -1,12 +1,20 @@
 package com.artivisi.android.kyurifood.headoffice.fragments;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.artivisi.android.kyurifood.headoffice.R;
 
@@ -29,6 +37,10 @@ public class RegionalFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    Button btn_tambah;
+    Dialog addRegional;
+    ListView listregional;
 
     public RegionalFragment() {
         // Required empty public constructor
@@ -65,7 +77,73 @@ public class RegionalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_regional, container, false);
+        final View view =  inflater.inflate(R.layout.fragment_regional, container, false);
+
+        listregional = (ListView)view.findViewById(R.id.regional_list);
+        listregional.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                final CharSequence[] dialogregion = {"Edit","Delete"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Pilih Menu");
+                builder.setItems(dialogregion, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int region) {
+                       switch (region){
+                           case 0:
+                               Toast.makeText(getActivity(),"Edited",Toast.LENGTH_SHORT).show();
+                               break;
+                           case 1:
+                               Toast.makeText(getActivity(),"Deleted",Toast.LENGTH_SHORT).show();
+
+                               break;
+                       }
+                    }
+                });
+                builder.create().show();
+                return false;
+
+
+            }
+        });
+
+        btn_tambah = (Button)view.findViewById(R.id.btn_tmbh_regional);
+        btn_tambah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAddRegional();
+            }
+
+            private void showAddRegional() {
+                addRegional = new Dialog(getActivity());
+                addRegional.setContentView(R.layout.tambah_regional);
+                addRegional.setTitle("Add Regional");
+                addRegional.setCancelable(false);
+                addRegional.show();
+
+                Button but = (Button) addRegional.findViewById(R.id.cancel);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        addRegional.dismiss();
+                    }
+                });
+                Button ok = (Button) addRegional.findViewById(R.id.ok);
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        addRegional.dismiss();
+                    }
+                });
+
+
+
+
+            }
+        });
+
+        return view;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

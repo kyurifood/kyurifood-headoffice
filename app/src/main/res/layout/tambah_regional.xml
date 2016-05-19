@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/layout_padding_margin"
+    tools:context="com.artivisi.android.kyurifood.headoffice.fragments.DistributorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Regional"
+                android:ems="10"
+                android:id="@+id/regional"
+                android:layout_below="@+id/textView3"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout style="@style/ComponentLayout"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Button style="@style/GreenButton"
+                android:text="ok"
+                android:id="@+id/ok"/>
+            <Button style="@style/RedButton"
+                android:text="cancel"
+                android:id="@+id/cancel"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

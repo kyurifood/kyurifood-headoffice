@@ -2,15 +2,23 @@ package com.artivisi.android.kyurifood.headoffice.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.AsyncQueryHandler;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -74,6 +82,7 @@ public class DistributorFragment extends Fragment {
         }
 
 
+
     }
 
     @Override
@@ -94,26 +103,9 @@ public class DistributorFragment extends Fragment {
         txtalamat = (EditText)view.findViewById(R.id.editalamat);
         txtkodepos = (EditText)view.findViewById(R.id.editkodepos);
         txtemail = (EditText)view.findViewById(R.id.editemail);
-        String txtk =  txtkode.getText().toString();
 
-        if (txtk.matches("")){
-            txtkode.setError("Tidak boleh kosong!");
-        }
-        if (txtnama.getText().toString().length() == 0){
-            txtnama.setError("Tidak boleh kosong!");
-        }
-        if (txthp.getText().toString().length() == 0){
-            txthp.setError("Tidak boleh kosong!");
-        }
-        if (txtalamat.getText().toString().length() == 0){
-            txtalamat.setError("Tidak boleh kosong!");
-        }
-        if (txtkodepos.getText().toString().length() == 0){
-            txtkodepos.setError("Tidak boleh kosong!");
-        }
-        if (txtemail.getText().toString().length() == 0){
-            txtemail.setError("Tidak boleh kosong!");
-        }
+
+
 
 
         btn_bank = (Button) view.findViewById(R.id.btnbank);
@@ -162,14 +154,24 @@ public class DistributorFragment extends Fragment {
 
 
         });
-
+        setHasOptionsMenu(true);
         return view;
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getActivity().getMenuInflater().inflate(R.menu.distributor_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 
 
 
 
-        // TODO: Rename method, update argument and hook method into UI event
+    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);

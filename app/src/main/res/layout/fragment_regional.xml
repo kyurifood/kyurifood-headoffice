@@ -4,10 +4,17 @@
     tools:context="com.artivisi.android.kyurifood.headoffice.fragments.RegionalFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView style="@style/Text.Headline.White"
-        android:padding="@dimen/layout_padding"
-        android:background="@color/material_deep_orange_500"
-        android:gravity="center"
-        android:text="Regional"/>
-
+    <Button
+        style="@style/GreenButton"
+        android:layout_width="match_parent"
+        android:text="Tambah Regional"
+        android:layout_height="50dp"
+        android:id="@+id/btn_tmbh_regional"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/regional_list"
+        android:entries="@array/proklist"
+        android:longClickable="true"
+        android:layout_weight="1" />
 </LinearLayout>
