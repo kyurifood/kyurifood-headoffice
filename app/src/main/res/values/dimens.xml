@@ -30,7 +30,6 @@
 
     <dimen name="stroke">2dp</dimen>
 
-    <dimen name="line_width">1dp</dimen>
 
     <dimen name="dash_gap">10dp</dimen>
 
