@@ -35,4 +35,6 @@
     <dimen name="dash_width">25dp</dimen>
 
     <dimen name="simple_list_padding">4dp</dimen>
+
+    <dimen name="line_width">1dp</dimen>
 </resources>

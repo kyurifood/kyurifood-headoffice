@@ -277,4 +277,11 @@
         <item name="android:textSize">@dimen/abc_text_size_medium_material</item>
         <item name="android:fontFamily">sans-serif-normal</item>
     </style>
+
+    <style name="HorizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_width</item>
+        <item name="android:background">@drawable/line_horizontal</item>
+    </style>
+
 </resources>

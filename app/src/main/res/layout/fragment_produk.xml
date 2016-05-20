@@ -1,13 +1,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/DefaultLayout"
-    tools:context="com.artivisi.android.kyurifood.headoffice.fragments.ProdukFragment">
+    tools:context="com.artivisi.android.kyurifood.headoffice.fragments.ProdukFragment" android:weightSum="1">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView style="@style/Text.Headline.White"
-        android:padding="@dimen/layout_padding"
-        android:background="@color/material_blue_500"
-        android:gravity="center"
-        android:text="Produk"/>
+    <Button
+        android:id="@+id/btn_produk"
+        style="@style/Hijau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Tambah Produk"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.04" />
+
+    <ListView style="@style/LayoutMatchParent"
+        android:divider="@android:color/transparent"
+        android:id="@+id/lv_daftar"/>
 
 </LinearLayout>
