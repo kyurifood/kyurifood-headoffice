@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.artivisi.android.kyurifood.headoffice.R;
 
@@ -27,6 +29,8 @@ public class LaporanFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Button btn_produk, btn_distributor, btn_marketer,btn_penjualan;
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,7 +69,38 @@ public class LaporanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_laporan, container, false);
+        View view =  inflater.inflate(R.layout.fragment_laporan, container, false);
+            btn_produk = (Button)view.findViewById(R.id.btnProduk);
+            btn_marketer = (Button)view.findViewById(R.id.btnMarketer);
+            btn_distributor = (Button)view.findViewById(R.id.btnDistributor);
+            btn_penjualan = (Button)view.findViewById(R.id.btnPenjualan);
+
+            btn_produk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getActivity(),"laporan produk available soon",Toast.LENGTH_SHORT).show();
+                }
+            });
+        btn_marketer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"laporan marketer available soon",Toast.LENGTH_SHORT).show();
+            }
+        });
+        btn_distributor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"laporan distributor available soon",Toast.LENGTH_SHORT).show();
+            }
+        });
+        btn_penjualan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"laporan penjualan available soon",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
