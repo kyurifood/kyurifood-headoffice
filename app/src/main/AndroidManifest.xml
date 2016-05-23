@@ -26,8 +26,6 @@
 
         <activity android:name=".activities.ProdukActivity">
         </activity>
-        <activity android:name=".activities.HargaRegional">
-        </activity>
 
         <activity android:name=".activities.DetailPesananPengiriman"></activity>
 
