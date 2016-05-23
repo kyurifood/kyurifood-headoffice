@@ -25,6 +25,8 @@ import android.widget.Toast;
 import com.artivisi.android.kyurifood.headoffice.R;
 import com.artivisi.android.kyurifood.headoffice.activities.MainActivity;
 
+import java.util.zip.Inflater;
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -95,6 +97,7 @@ public class DistributorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         // Inflate the layout for this fragment
         final View view =  inflater.inflate(R.layout.fragment_distributor, container, false);
         txtkode = (EditText)view.findViewById(R.id.editkode);
@@ -154,21 +157,65 @@ public class DistributorFragment extends Fragment {
 
 
         });
-        setHasOptionsMenu(true);
+
         return view;
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getActivity().getMenuInflater().inflate(R.menu.distributor_menu, menu);
-        return true;
+        inflater.inflate(R.menu.distributor_menu, menu);
+
     }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_proses){
+            panggilclass();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
+    public void panggilclass() {
+        if (txtkode.getText().toString().length() == 0){
+            txtkode.setError("Tidak boleh kosong");
 
+        }
+         if (txtnama.getText().toString().length() == 0){
+            txtnama.setError("Tidak boleh kosong");
+
+        }
+         if (txtemail.getText().toString().length() == 0){
+            txtemail.setError("Tidak boleh kosong");
+
+        }
+         if (txthp.getText().toString().length() == 0){
+            txthp.setError("Tidak boleh kosong");
+
+        }
+         if (txtkodepos.getText().toString().length() == 0){
+            txtkodepos.setError("Tidak boleh kosong");
+
+        }
+
+
+         if (txtalamat.getText().toString().length() == 0){
+            txtalamat.setError("Tidak boleh kosong");
+
+        }
+
+
+        else{
+            Toast.makeText(getActivity(), "Data telah tersimpan!", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
 
 
     // TODO: Rename method, update argument and hook method into UI event
