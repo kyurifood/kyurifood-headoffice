@@ -5,8 +5,12 @@
 
     <item
         android:id="@+id/action_proses"
+<<<<<<< HEAD
         android:title="simpan"
         android:icon="@drawable/ic_content_save"
+=======
+        android:title="Tambah"
+>>>>>>> 6e45ecdf8b179ecac34f2ee08e64312caba3f414
         android:orderInCategory="100"
         app:showAsAction="always"/>
 
