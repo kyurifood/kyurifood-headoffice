@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.artivisi.android.kyurifood.headoffice.R;
 
@@ -29,6 +31,9 @@ public class PengaturanFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+
+    Button btn_infopribadi, btn_gantipass;
 
     public PengaturanFragment() {
         // Required empty public constructor
@@ -65,7 +70,25 @@ public class PengaturanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pengaturan, container, false);
+        View view =  inflater.inflate(R.layout.fragment_pengaturan, container, false);
+
+        btn_gantipass = (Button)view.findViewById(R.id.btn_gantipassword);
+        btn_infopribadi = (Button)view.findViewById(R.id.btn_info);
+
+        btn_gantipass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"Ganti Password available soon",Toast.LENGTH_SHORT).show();
+            }
+        });
+        btn_infopribadi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"Info Pribadi available soon",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

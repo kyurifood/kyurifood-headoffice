@@ -8,9 +8,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.artivisi.android.kyurifood.headoffice.R;
 
@@ -35,6 +38,8 @@ public class MarketerFragment extends Fragment {
 
     Button btnBank;
     Dialog addBank;
+
+    EditText txtkode, txtnama, txthp, txtalamat, txtkodepos, txtemail, txtpas, txtcpas;
 
     private OnFragmentInteractionListener mListener;
 
@@ -78,6 +83,13 @@ public class MarketerFragment extends Fragment {
         setHasOptionsMenu(true);
         final View view = inflater.inflate(R.layout.fragment_marketer, container, false);
 
+        txtkode = (EditText)view.findViewById(R.id.editkode);
+        txtnama = (EditText)view.findViewById(R.id.editnama);
+        txthp = (EditText)view.findViewById(R.id.edithp);
+        txtalamat = (EditText)view.findViewById(R.id.editalamat);
+        txtkodepos = (EditText)view.findViewById(R.id.editkodepos);
+        txtemail = (EditText)view.findViewById(R.id.editemail);
+
         btnBank = (Button) view.findViewById(R.id.btnbank);
         btnBank.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +117,53 @@ public class MarketerFragment extends Fragment {
 
         });
         return view;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.btn_registMarketer){
+            panggilclass();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void panggilclass() {
+        if (txtkode.getText().toString().length() == 0){
+            txtkode.setError("Tidak boleh kosong");
+
+        }
+        if (txtnama.getText().toString().length() == 0){
+            txtnama.setError("Tidak boleh kosong");
+
+        }
+        if (txtemail.getText().toString().length() == 0){
+            txtemail.setError("Tidak boleh kosong");
+
+        }
+        if (txthp.getText().toString().length() == 0){
+            txthp.setError("Tidak boleh kosong");
+
+        }
+        if (txtkodepos.getText().toString().length() == 0){
+            txtkodepos.setError("Tidak boleh kosong");
+
+        }
+
+
+        if (txtalamat.getText().toString().length() == 0){
+            txtalamat.setError("Tidak boleh kosong");
+
+        }
+
+
+        else{
+            Toast.makeText(getActivity(), "Data telah tersimpan!", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 
     @Override
