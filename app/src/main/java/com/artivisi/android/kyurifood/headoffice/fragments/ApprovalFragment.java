@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TabHost;
 
 import com.artivisi.android.kyurifood.headoffice.R;
 
@@ -65,7 +66,22 @@ public class ApprovalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_approval, container, false);
+        View view =  inflater.inflate(R.layout.fragment_approval, container, false);
+
+        TabHost host = (TabHost)view.findViewById(R.id.tab_host);
+        host.setup();
+
+        TabHost.TabSpec spec = host.newTabSpec("Detail Pesanan");
+        spec.setContent(R.id.tab_one_container);
+        spec.setIndicator("Distributor");
+        host.addTab(spec);
+
+        spec = host.newTabSpec("Detail Pengiriman");
+        spec.setContent(R.id.tab_two_container);
+        spec.setIndicator("Marketer");
+        host.addTab(spec);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

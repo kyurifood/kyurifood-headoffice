@@ -1,13 +1,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/DefaultLayout"
+    android:background="@color/white"
     tools:context="com.artivisi.android.kyurifood.headoffice.fragments.ApprovalFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView style="@style/Text.Headline.White"
-        android:padding="@dimen/layout_padding"
-        android:background="@color/material_lime_500"
-        android:gravity="center"
-        android:text="Approval"/>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalScrollbarPosition="defaultPosition">
+        <TabHost android:id="@+id/tab_host"
+            style="@style/BlueButtonTheme"
+            android:layout_width="fill_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content" >
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TabWidget android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <FrameLayout android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/tab_one_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView style="@style/Text.Headline.White"
+                            android:padding="@dimen/layout_padding"
+                            android:background="@color/material_blue_500"
+                            android:gravity="center"
+                            android:layout_marginTop="100dp"
+                            android:text="daftar distributor baru"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/tab_two_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView style="@style/Text.Headline.White"
+                            android:padding="@dimen/layout_padding"
+                            android:background="@color/material_deep_orange_500"
+                            android:gravity="center"
+                            android:layout_marginTop="100dp"
+                            android:text="Daftar marketer baru"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </ScrollView>
 
 </LinearLayout>
