@@ -8,6 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +80,7 @@ public class RegionalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        setHasOptionsMenu(true);
         final View view =  inflater.inflate(R.layout.fragment_regional, container, false);
 
         listregional = (ListView)view.findViewById(R.id.regional_list);
@@ -106,45 +110,53 @@ public class RegionalFragment extends Fragment {
 
             }
         });
-
-        btn_tambah = (Button)view.findViewById(R.id.btn_tmbh_regional);
-        btn_tambah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showAddRegional();
-            }
-
-            private void showAddRegional() {
-                addRegional = new Dialog(getActivity());
-                addRegional.setContentView(R.layout.tambah_regional);
-                addRegional.setTitle("Add Regional");
-                addRegional.setCancelable(false);
-                addRegional.show();
-
-                Button but = (Button) addRegional.findViewById(R.id.cancel);
-                but.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        addRegional.dismiss();
-                    }
-                });
-                Button ok = (Button) addRegional.findViewById(R.id.ok);
-                ok.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        addRegional.dismiss();
-                    }
-                });
-
-
-
-
-            }
-        });
-
         return view;
 
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        inflater.inflate(R.menu.regional_menu, menu);
+
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.tambah_region){
+            panggilclass();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void panggilclass() {
+        addRegional = new Dialog(getActivity());
+        addRegional.setContentView(R.layout.tambah_regional);
+        addRegional.setTitle("Add Regional");
+        addRegional.setCancelable(false);
+        addRegional.show();
+
+        Button but = (Button) addRegional.findViewById(R.id.cancel);
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addRegional.dismiss();
+            }
+        });
+        Button ok = (Button) addRegional.findViewById(R.id.ok);
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addRegional.dismiss();
+            }
+        });
+
+    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
