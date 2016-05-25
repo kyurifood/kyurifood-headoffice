@@ -7,10 +7,7 @@
         android:id="@+id/action_proses"
         android:title="simpan"
         android:icon="@drawable/ic_content_save"
-<<<<<<< HEAD
-=======
 
->>>>>>> b1d6184908f99a396885e952f68302f766cb5424
         android:orderInCategory="100"
         app:showAsAction="always"/>
 
