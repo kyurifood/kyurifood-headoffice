@@ -144,6 +144,7 @@ public class RegionalFragment extends Fragment {
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getActivity(), "Cancel",Toast.LENGTH_SHORT).show();
                 addRegional.dismiss();
             }
         });
@@ -152,6 +153,7 @@ public class RegionalFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 addRegional.dismiss();
+                Toast.makeText(getActivity(), "Ok",Toast.LENGTH_SHORT).show();
             }
         });
 
