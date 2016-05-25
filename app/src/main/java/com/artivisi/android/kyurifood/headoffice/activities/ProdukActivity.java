@@ -137,6 +137,7 @@ public class ProdukActivity extends AppCompatActivity {
 
 
     private void showAddDialog() {
+
         addHargaRegional = new Dialog(ProdukActivity.this);
         addHargaRegional.setContentView(R.layout.harga_regional);
         addHargaRegional.setTitle("Harga Regional");
