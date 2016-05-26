@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.artivisi.android.kyurifood.headoffice.R;
@@ -14,11 +15,22 @@ public class MainActivity extends AppCompatActivity {
 
     EditText txtEmail, txtPassword;
     Button btnLogin;
+    TextView daftar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        daftar = (TextView) findViewById(R.id.link_signup);
+        daftar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+
+                Intent myIntent = new Intent(MainActivity.this,
+                        SignUp.class);
+                startActivity(myIntent);
+            }
+        });
 
         txtEmail = (EditText)findViewById(R.id.input_email);
         txtPassword = (EditText)findViewById(R.id.input_password);
