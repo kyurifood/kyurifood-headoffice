@@ -71,6 +71,7 @@ public class PesananFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.list_layout_item_pesanan, container, false);
+
         btn_detail = (Button)view.findViewById(R.id.btn_action_2);
         btn_detail.setOnClickListener(new View.OnClickListener() {
             @Override

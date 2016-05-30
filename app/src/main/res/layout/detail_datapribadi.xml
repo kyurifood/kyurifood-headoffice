@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fillViewport="true">
+    <LinearLayout
+
+        style="@style/DefaultLayout"
+        tools:context="com.artivisi.android.kyurifood.headoffice.fragments.DistributorFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/layout_padding_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Detail Data Pribadi"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/panel_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regional"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/regional"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kode"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kode"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nama"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No-HP"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nohp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WhatsApp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/whatsapp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pin BB"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pinbb"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/alamat"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kecamatan"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kecamatan"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kelurahan"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kelurahan"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kode Pos"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kodepos"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Bank"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nm_bank"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Rekening"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nmr_rekening"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Rekening"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_weight="1.1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_weight="1.9"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nm_rekening"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+</LinearLayout>
+    </ScrollView>

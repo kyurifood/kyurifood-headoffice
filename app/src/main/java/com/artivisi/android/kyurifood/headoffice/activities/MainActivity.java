@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.artivisi.android.kyurifood.headoffice.R;
+import com.artivisi.android.kyurifood.headoffice.fragments.PengaturanFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 Intent myIntent = new Intent(MainActivity.this,
-                        SignUp.class);
+                        PengaturanFragment.class);
                 startActivity(myIntent);
             }
         });
+
 
         txtEmail = (EditText)findViewById(R.id.input_email);
         txtPassword = (EditText)findViewById(R.id.input_password);

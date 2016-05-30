@@ -1,6 +1,7 @@
 package com.artivisi.android.kyurifood.headoffice.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.artivisi.android.kyurifood.headoffice.R;
+import com.artivisi.android.kyurifood.headoffice.activities.DataPribadi;
+import com.artivisi.android.kyurifood.headoffice.activities.DetailPesananPengiriman;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -72,19 +75,20 @@ public class PengaturanFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_pengaturan, container, false);
 
-        btn_gantipass = (Button)view.findViewById(R.id.btn_gantipassword);
         btn_infopribadi = (Button)view.findViewById(R.id.btn_info);
+        btn_gantipass = (Button)view.findViewById(R.id.btn_gantipassword);
 
+        btn_infopribadi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), DataPribadi.class);
+                startActivity(i);
+            }
+        });
         btn_gantipass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"Ganti Password available soon",Toast.LENGTH_SHORT).show();
-            }
-        });
-        btn_infopribadi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"Info Pribadi available soon",Toast.LENGTH_SHORT).show();
             }
         });
 
