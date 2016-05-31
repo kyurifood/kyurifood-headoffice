@@ -79,7 +79,7 @@ public class PengaturanFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_pengaturan, container, false);
 
-        btn_infopribadi = (Button)view.findViewById(R.id.btn_info);
+        btn_infopribadi = (Button)view.findViewById(R.id.btnInfoDetail);
         btn_infopribadi.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
