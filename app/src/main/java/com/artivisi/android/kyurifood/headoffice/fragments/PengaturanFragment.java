@@ -1,5 +1,6 @@
 package com.artivisi.android.kyurifood.headoffice.fragments;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -36,7 +37,8 @@ public class PengaturanFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
 
-    Button btn_infopribadi, btn_gantipass;
+    Button btn_infopribadi, btn_gantipass, btnDetail;
+    Dialog addDetail;
 
     public PengaturanFragment() {
         // Required empty public constructor
@@ -69,6 +71,8 @@ public class PengaturanFragment extends Fragment {
         }
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -76,15 +80,15 @@ public class PengaturanFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_pengaturan, container, false);
 
         btn_infopribadi = (Button)view.findViewById(R.id.btn_info);
-        btn_gantipass = (Button)view.findViewById(R.id.btn_gantipassword);
-
-        btn_infopribadi.setOnClickListener(new View.OnClickListener() {
+        btn_infopribadi.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent i = new Intent(getActivity(), DataPribadi.class);
-                startActivity(i);
+                getActivity().startActivity(i);
             }
         });
+
+        btn_gantipass = (Button)view.findViewById(R.id.btn_gantipassword);
         btn_gantipass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
