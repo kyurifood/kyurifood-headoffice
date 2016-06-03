@@ -81,17 +81,15 @@ public class PengaturanFragment extends Fragment {
 
         btn_infopribadi = (Button)view.findViewById(R.id.btnInfoDetail);
         btn_infopribadi.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
+            public void onClick(View arg0){
                 Intent i = new Intent(getActivity(), DataPribadi.class);
-                getActivity().startActivity(i);
+                startActivity(i);
             }
         });
 
         btn_gantipass = (Button)view.findViewById(R.id.btn_gantipassword);
         btn_gantipass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            public void onClick(View arg0) {
                 Toast.makeText(getActivity(),"Ganti Password available soon",Toast.LENGTH_SHORT).show();
             }
         });
