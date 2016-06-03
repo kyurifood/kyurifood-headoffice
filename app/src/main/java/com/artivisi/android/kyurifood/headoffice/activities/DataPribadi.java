@@ -15,9 +15,9 @@ public class DataPribadi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_datapribadi);
 
-        getSupportActionBar().setTitle("Detail DataPribadi");
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setTitle("Detail DataPribadi");
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
         // getSupportActionBar().setLogo(R.drawable.bar_ic_placeholder);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
     }
 }

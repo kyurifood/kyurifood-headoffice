@@ -32,6 +32,10 @@
 
         <activity android:name=".activities.DetailPesananPengiriman"></activity>
 
+        <activity android:name=".activities.DataPribadi"></activity>
+
+        <activity android:name=".activities.SignUp"></activity>
+
     </application>
 
 </manifest>

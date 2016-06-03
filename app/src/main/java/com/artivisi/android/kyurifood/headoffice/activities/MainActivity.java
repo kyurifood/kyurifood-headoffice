@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 Intent myIntent = new Intent(MainActivity.this,
-                        PengaturanFragment.class);
+                        SignUp.class);
                 startActivity(myIntent);
             }
         });
