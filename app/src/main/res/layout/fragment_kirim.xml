@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="No Resi"
+        android:id="@+id/no_resi"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Nama Penerima"
+        android:id="@+id/nama_penerima" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Tanggal"
+        android:id="@+id/tanggal" />
+
+    <LinearLayout style="@style/ComponentLayout"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <Button style="@style/Hijau"
+            android:text="send"
+            android:id="@+id/send"/>
+
+        <Button style="@style/RedButton"
+            android:text="cancel"
+            android:id="@+id/cancel"/>
+    </LinearLayout>
+
+</LinearLayout>
